@@ -1,6 +1,24 @@
 import styled from 'styled-components';
 import Box from '../Box';
 
+{/*export function ProfileRelationsBoxWrapper() {
+  return (
+    <ul>
+      {pessoasFavoritas.map((itemAtual) => {
+        return (
+         <li key={itemAtual}>
+          <a href={`/users/${itemAtual}`}>
+           <img src={`https://github.com/${itemAtual}.png`} />
+           <span>{itemAtual}</span>
+          </a>
+         </li>
+        )
+      })}
+    </ul>
+  )
+
+}*/}
+
 export const ProfileRelationsBoxWrapper = styled(Box)`
   ul {
     display: grid;

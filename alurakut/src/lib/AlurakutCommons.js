@@ -21,6 +21,7 @@ function Link({ href, children, ...props }) {
 // ================================================================================================================
 export function AlurakutMenu({ githubUser }) {
   const [isMenuOpen, setMenuState] = React.useState(false);
+  const usuarioAleatorio = 'HiratsukaMi'; // acrescentei essa variável para a foto e o usuário aparecerem no menu na versão mobile.
   return (
     <AlurakutMenu.Wrapper isMenuOpen={isMenuOpen}>
       <div className="container">
@@ -39,7 +40,7 @@ export function AlurakutMenu({ githubUser }) {
             Sair
           </a>
           <div>
-            <input placeholder="Pesquisar no Orkut" />
+            <input placeholder="Pesquisar no Alurakut" />
           </div>
         </nav>
 
@@ -48,7 +49,7 @@ export function AlurakutMenu({ githubUser }) {
           {!isMenuOpen && <img src={`${BASE_URL}/icons/menu-closed.svg?v=${v}`} />}
         </button>
       </div>
-      <AlurakutMenuProfileSidebar githubUser={githubUser} />
+      <AlurakutMenuProfileSidebar githubUser={usuarioAleatorio} />
     </AlurakutMenu.Wrapper>
   )
 }
@@ -162,7 +163,7 @@ AlurakutMenu.Logo = styled.img`
   height: 34px;
 `;
 
-function AlurakutMenuProfileSidebar({ githubUser }) {
+export function AlurakutMenuProfileSidebar({githubUser}) {
   return (
     <div className="alurakutMenuProfileSidebar">
       <div>
